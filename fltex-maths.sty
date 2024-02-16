@@ -1,0 +1,31 @@
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{tikz-cd}
+\usepackage{eucal}
+
+% Typesetting function restriction: \restr{f}{U}
+\newcommand\restr[2]{{% we make the whole thing an ordinary symbol
+  \left.\kern-\nulldelimiterspace % automatically resize the bar with \right
+  #1 % the function
+  \vphantom{\big|} % pretend it's a little taller at normal size
+  \right|_{#2} % this is the delimiter
+  }}
+
+\newcommand\cat[1]{
+    % \textsf{\textbf{#1}}
+    \textsf{#1}
+}
+
+\newcommand{\myarrow}[3]{
+  \begin{tikzcd}[cramped, sep=small]
+    #1 \arrow[r, "#2"] \pgfmatrixnextcell #3
+  \end{tikzcd}
+}
+
+\renewcommand{\epsilon}{\varepsilon}
+
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\dom}{dom}
+\DeclareMathOperator{\cod}{cod}
+\DeclareMathOperator{\id}{id}
