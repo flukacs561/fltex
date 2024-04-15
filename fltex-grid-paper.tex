@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage[pattern=dot, 
+patternsize=5mm, 
+textarea,
+geometry={
+	a4paper,
+	left=8mm,
+	right=8mm,
+	top=12mm,
+	bottom=8mm,
+	headsep=10pt,
+	footskip=25pt,
+}
+]{gridpapers}
+% https://github.com/mcnees/LaTeX-Graph-Paper
+% thanks Prof. McNees and Prof. Leo
+%you can print grids or triangles as well
+
+%header and footer
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+%header and footer text
+\lhead{\textcolor{gray}{Ferenc Lukács}}
+\rhead{\textcolor{gray}{Date: {~~~/~~~/~~~~}; Page No.: {~~~~}}}
+% \cfoot{\textcolor{gray}{Department of Mathematics, KTH Stockholm}}
+
+%colouring the horizontal lines in the header and footer
+% https://tex.stackexchange.com/questions/375121/change-horizontal-line-color-on-top-of-footer
+\renewcommand{\headrulewidth}{0.4pt}
+% \renewcommand{\footrulewidth}{0.4pt}
+% Save standard definitions
+\let\HeadRule\headrule
+% \let\FootRule\footrule
+% Add color to standard definitions.
+\renewcommand\headrule{\color{gray}\HeadRule}
+% \renewcommand\footrule{\textcolor{gray}{\FootRule}}
+
+%all done
+
+\begin{document}
+	 \pagenumbering{gobble}
+	~ %otherwise there will be an error
+	
+\end{document}
+
