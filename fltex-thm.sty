@@ -1,0 +1,33 @@
+\newcounter{egyseg}[section]
+\newenvironment{definicio}{
+	\vspace{5pt}
+	\stepcounter{egyseg}
+	\noindent\textbf{D \thesection.\theegyseg.}
+	\vspace{5pt}
+}{\par}
+
+\newenvironment{tetel}[1][]{
+	\vspace{5pt}
+	\stepcounter{egyseg}
+	\noindent\textbf{T \thesection.\theegyseg.}
+	\ifx\relax#1\relax
+	\else
+		\textit{(#1)}
+	\fi
+	\vspace{5pt}
+}{\par}
+
+\newenvironment{bekezdes}{
+	\vspace{5pt}
+	\stepcounter{egyseg}
+	\noindent\textbf{\thesection.\theegyseg.}
+	\vspace{5pt}
+}{\par}
+
+\newenvironment{feladat}{
+	\vspace{5pt}
+	\stepcounter{egyseg}
+	\noindent\textbf{F \thesection.\theegyseg.}
+	\vspace{5pt}
+}{\par}
+
