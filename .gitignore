@@ -1,1 +1,4 @@
 *.pdf
+!fltex-grid-paper.pdf
+auto
+auto/*
